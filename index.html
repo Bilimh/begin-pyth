@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Cours Python & Chatbot</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.min.css">
+
+    <style>
+        .reveal pre code { padding: 20px; border-radius: 10px; }
+        h2 { color: #2c3e50 !important; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide 1: Introduction - Transition FADE -->
+            <section data-transition="fade" data-background-color="#fdfcf0">
+                <h1>Python & Chatbot</h1>
+                <p>Apprendre les bases de la programmation pas à pas</p>
+                
+                <p><small>pour créer un Chatbot</small></p>
+            </section>
+            <!-- SECTION 0 : INTRODUCTION -->
+            <section data-transition="fade" data-background-color="#fffbea">
+                <section>
+                    <h1>Python</h1>
+                     <p>Python est un <strong>langage de programmation</strong> simple et puissant qui permet de donner des instructions à un ordinateur pour réaliser des tâches variées.</p>
+                </section>
+                <section data-transition="slide">
+                    <h3>🛠️ Au programme</h3>
+                    <ul>
+                        <li>Manipuler des données</li>
+                        <li>Gérer la logique</li>
+                        <li>Automatiser des tâches</li>
+                    </ul>
+                </section>
+            </section>
+            <!-- Section : Démarrage & Ressources - Transition SLIDE -->
+<section data-transition="slide" data-background-color="#fffbea">
+    
+    <!-- Sous-section 1 : Liens utiles -->
+    <section>
+        <h2>🚀 Prêt à coder ?</h2>
+        <p>Pour travailler, nous utiliserons deux outils essentiels :</p>
+        <div style="margin-top: 30px;">
+            <p>
+                <a href="https://notebook.basthon.fr/" target="_blank" style="color: #0d47a1; font-weight: bold;">💻 Basthon Notebook</a><br>
+                <small>(Interface pour écrire et tester ton code)</small>
+            </p>
+            <p>
+                <a href="https://docs.python.org/fr/3/" target="_blank" style="color: #1b5e20; font-weight: bold;">📚 Documentation Python (FR)</a><br>
+                <small>(Le manuel officiel pour tout comprendre)</small>
+            </p>
+        </div>
+    </section>
+
+    <!-- Sous-section 2 : Mode d'emploi -->
+    <section data-transition="fade">
+        <h3>Guide Rapide</h3>
+        <div style="text-align: left; font-size: 0.8em; margin-top: 20px;">
+            <p><strong>▶️ Exécuter sur Basthon :</strong></p>
+            <ul>
+                <li>Écris ton code dans une cellule grise.</li>
+                <li>Clique sur le bouton <strong>Exécuter</strong> (flèche) ou utilise le raccourci <code>Ctrl + Entrée</code> pour voir le résultat.</li>
+            </ul>
+            <p style="margin-top: 20px;"><strong>🔍 Chercher dans la Documentation :</strong></p>
+            <ul>
+                <li>Utilise la <strong>barre de recherche</strong> en haut à droite du site.</li>
+                <li>Tape le nom d'une fonction (ex: <code>input</code> ou <code>range</code>) pour trouver son utilité et des exemples.</li>
+            </ul>
+        </div>
+    </section>
+
+            <!-- Slide 2: Variables - Transition SLIDE -->
+            <section data-transition="slide" data-background-color="#f0f7ff">
+                <h2>1. Variables et Affichage</h2>
+                <p>Stocker et afficher des informations.</p>
+                <pre><code class="python" data-trim>
+# Programme 2 : Variable simple
+prenom = "Alex"
+print("Bonjour", prenom)
+                </code></pre>
+            </section>
+
+            <!-- Slide 3: Input - Transition CONVEX -->
+            <section data-transition="convex" data-background-color="#fff5f5">
+                <h2>2. Interaction Utilisateur</h2>
+                <p>Récupérer du texte ou des nombres avec <code>input()</code>.</p>
+                <pre><code class="python" data-trim>
+# Programme 3 : Entrée utilisateur
+prenom = input("Entre ton prénom : ")
+age = int(input("Entre ton âge : ")) # int() pour un nombre
+print("Bienvenue", prenom, "tu as", age, "ans")
+                </code></pre>
+            </section>
+
+            <!-- Slide 4: Conditions - Transition ZOOM -->
+            <section data-transition="zoom" data-background-color="#f5fff5">
+                <h2>3. Les Conditions</h2>
+                <p>Prendre des décisions avec <code>if</code>, <code>elif</code>, <code>else</code>.</p>
+                <pre><code class="python" data-trim>
+note = int(input("Entre une note : "))
+if note >= 16:
+    print("Très bien")
+elif note >= 12:
+    print("Bien")
+else:
+    print("À améliorer")
+                </code></pre>
+            </section>
+
+            <!-- Slide 5: Boucles For - Transition SLIDE -->
+            <section data-transition="slide" data-background-color="#fcf0ff">
+                <h2>4. Les Boucles "For"</h2>
+                <p>Répéter une action un nombre de fois précis.</p>
+                <pre><code class="python" data-trim>
+# Afficher 5 fois Bonjour
+for i in range(5):
+    print("Bonjour")
+
+# Parcourir une liste
+prenoms = ["Alex", "Samir", "Lina"]
+for p in prenoms:
+    print(p)
+                </code></pre>
+            </section>
+
+            <!-- Slide 6: Boucles While - Transition CONVEX -->
+            <section data-transition="convex" data-background-color="#f0ffff">
+                <h2>5. Les Boucles "While"</h2>
+                <p>Répéter tant qu'une condition est vraie.</p>
+                <pre><code class="python" data-trim>
+mot = ""
+while mot != "stop":
+    mot = input("Écris stop pour arrêter : ")
+                </code></pre>
+            </section>
+
+            <!-- Slide 7: Fonctions - Transition FADE -->
+            <section data-transition="fade" data-background-color="#fff9f0">
+                <h2>6. Les Fonctions</h2>
+                <p>Créer des blocs de code réutilisables avec <code>def</code>.</p>
+                <pre><code class="python" data-trim>
+def dire_prenom(prenom):
+    print("Bonjour", prenom)
+
+dire_prenom("Alex") # Appel de la fonction
+                </code></pre>
+            </section>
+
+            <!-- Slide 8: Dictionnaires - Transition ZOOM -->
+            <section data-transition="zoom" data-background-color="#f0f0f0">
+                <h2>7. Les Dictionnaires</h2>
+                <p>Organiser des données par clés et valeurs.</p>
+                <pre><code class="python" data-trim>
+personne = {"prenom": "Alex", "age": 20}
+print(personne["prenom"]) # Affiche Alex
+                </code></pre>
+            </section>
+<!-- Section : Configuration de l'environnement - Transition SLIDE -->
+<section data-transition="slide" data-background-color="#e3f2fd">
+    <h2>8. Configuration de l'environnement</h2>
+    <p>Exécutez ces commandes dans votre terminal :</p>
+    <pre><code class="bash" data-trim>
+# Étape 1 — Créer un environnement
+python -m venv monenv
+
+# Étape 2 — Activer l’environnement
+monenv\Scripts\activate
+
+# Étape 3 — Installer la bibliothèque
+pip install openai
+    </code></pre>
+</section>
+            <!-- Slide 9: OpenAI - Transition SLIDE -->
+            <section data-transition="slide" data-background-color="#e8f5e9">
+                <h2>9. Créer un Chatbot</h2>
+                <p>Utiliser l'API OpenAI pour discuter avec l'IA.</p>
+                <pre><code class="python" data-trim>
+from openai import OpenAI
+client = OpenAI(api_key="TA_CLE_API")
+
+while True:
+    question = input("Toi : ")
+    response = client.chat.completions.create(
+        model="gpt-4.1-mini",
+        messages=[{"role": "user", "content": question}]
+    )
+    print("Bot :", response.choices.message.content)
+                </code></pre>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            plugins: [ RevealHighlight ]
+        });
+    </script>
+</body>
+</html>
