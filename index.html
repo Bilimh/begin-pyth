@@ -185,7 +185,8 @@ pip install openai
                 <p>Utiliser l'API OpenAI pour discuter avec l'IA.</p>
                 <pre><code class="python" data-trim>
 from openai import OpenAI
-client = OpenAI(api_key="TA_CLE_API")
+api_key = ''
+client = OpenAI(api_key=api_key )
 
 while True:
     question = input("Toi : ")
@@ -193,7 +194,7 @@ while True:
         model="gpt-4.1-mini",
         messages=[{"role": "user", "content": question}]
     )
-    print("Bot :", response.choices.message.content)
+    print("Bot :", response.choices[0].message.content)
                 </code></pre>
             </section>
 <!-- Slide 1 : Évolution vers le Web - Transition ZOOM -->
